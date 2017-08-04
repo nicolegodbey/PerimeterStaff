@@ -7,9 +7,9 @@ using ThinkMinistry.RESTAPIWrapper;
 
 namespace PerimeterStaff.Controllers
 {
-    public class HomeController : Controller
+    public class MetricsController : Controller
     {
-        // GET: Home
+        // GET: Metrics
         public ActionResult Index()
         {
             return View();

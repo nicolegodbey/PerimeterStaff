@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Weekly";
+}
+
+<div class="container-fluid">
+
+    <div class="panel panel-default">
+        <div class="panel-heading">Prayer Requests</div>
+
+        <div class="panel-body">
+            <div id="accordion" role="tablist" aria-multiselectable="true">
+                @foreach (var Prayer in Model)
+            {
+                    <div class="card">
+                        <div class="card-header" role="tab">
+                            <h5 class="mb-0">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#@Prayer.feedbackEntryID" aria-expanded="false" aria-controls="collapseTwo">
+                                    @Prayer.displayName
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="@Prayer.feedbackEntryID" class="collapse" role="tabpanel">
+                            <div class="card-block">
+                                <div>Email: <a href="mailto:@Prayer.emailAddress">@Prayer.emailAddress</a></div>
+                                <div>Mobile Phone: @Prayer.mobilePhone</div>
+                                <div>Home Phone: @Prayer.homePhone</div><br />
+                                <div>Membership: @Prayer.membershipStatus</div>
+                                <div>Parish: @Prayer.parishName</div>
+                                <div>Shepherd: @Prayer.shepherd</div><br />
+                                <div><blockquote class="blockquote">@Prayer.description</blockquote></div>
+
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
