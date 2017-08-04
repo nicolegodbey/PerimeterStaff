@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+    </style>
+    <title>ThinkMinistry.APIWrapper ReadMe</title>
+</head>
+<body>
+    <h1>ThinkMinistry.APIWrapper Documentation</h1>
+
+    <h2>What is this?</h2>
+    <p>
+        This package provides a very simple wrapper around the ThinkMinistry REST API and OAuth2 implementations.  This wrapper removes any need for you to work directly with OAuth, tokens, authentication, and gives you and easy to configure system that relies on client credentials to authenticate and authorize your usage of platform resources.
+    </p>
+
+    <h2>Basic Usage</h2>
+    <p>
+        Add the following to your Controller:
+        <pre>
+            using ThinkMinistry.RESTAPIWrapper;
+        </pre>
+
+        When you want to make use of the wrapper for a simple query, simply instantiate the wrapper.  The "CreateWebApiClient()" method will use the current hostname and resolve all settings to the _DomainData folder.  Additionally, you can pass in a hostname and avoid hostname resolution entirely.
+        <pre>
+            var apiClient = PowerApi.CreateWebApiClient();
+
+            var query = new APIQueryRequest();
+            query.Table = "Contacts";
+            query.Top = 10;
+
+            var results = apiClient.GetCollection(query);
+        </pre>
+    </p>
+
+    <h2>Methods</h2>
+
+
+    <h2>Implement File Controller</h2>
+    <p>The following code can be used in an MVC controller to get a file.</p>
+    <pre>
+        public async Task<FileResult> Index(Guid fileGuid, string fileName)
+        {
+            APIGetFileRequest getFileRequest = new APIGetFileRequest()
+            {
+                 FileGuid = fileGuid
+            };
+            byte[] fileBytes = await PowerAPI.GetFileAsync(getFileRequest);
+            return File(fileBytes, System.Net.Mime.MediaTypeNames.Application.Octet, fileName);
+        }
+    </pre>
+</pre>
+</body>
+</html>
