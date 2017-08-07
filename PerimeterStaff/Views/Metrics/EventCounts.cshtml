@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "EventCounts";
+}
+
+<h2>EventCounts</h2>
+
+<form id="eventcounts">
+    
+    <div class="form-group">
+        <label for="eventtitle">Event Title: </label>
+        <select class="form-control" id="eventtitle">
+        @foreach (var eventsum in Model)
+        {
+            <option id="@eventsum.eventID">@eventsum.eventTitle</option>
+        }
+        </select>
+    </div>
+
+   
+    <h5>Registered: </h5>
+ 
+
+
+
+   
+
+
+
+
+
+</form>
+
