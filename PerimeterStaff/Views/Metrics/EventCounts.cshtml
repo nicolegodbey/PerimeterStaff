@@ -8,8 +8,8 @@
 <form id="eventcounts">
     
     <div class="form-group">
-        <label for="eventtitle">Select Event: </label>
-        <select class="form-control" id="eventtitle">
+        <label for="eventtitle">Event:</label>
+        <select class="form-control" id="eventtitle"  title="Select Event" data-width="fit">
         @foreach (var eventsum in Model)
         {
             <option id="@eventsum.eventID">@eventsum.eventTitle</option>
