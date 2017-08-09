@@ -32,7 +32,7 @@ namespace PerimeterStaff.Controllers
 
             APIStoredProcRequest sp = new APIStoredProcRequest()
             {
-                StoredProcedure = "api_PeriemterStaff_GetCurrentPrayers"
+                StoredProcedure = "api_PerimeterStaff_GetCurrentPrayers"
 
             };
             dynamic response = api.ExecuteStoredProcedure(sp);
