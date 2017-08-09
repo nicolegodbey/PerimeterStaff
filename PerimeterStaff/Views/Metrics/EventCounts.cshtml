@@ -3,12 +3,12 @@
     ViewBag.Title = "EventCounts";
 }
 
-<h2>EventCounts</h2>
+
 
 <form id="eventcounts">
     
     <div class="form-group">
-        <label for="eventtitle">Event Title: </label>
+        <label for="eventtitle">Select Event: </label>
         <select class="form-control" id="eventtitle">
         @foreach (var eventsum in Model)
         {
@@ -18,7 +18,15 @@
     </div>
 
    
-    <h5>Registered: </h5>
+    <div class="panel panel-default panel-info">
+        <div class="panel-heading">Registered</div>
+        <div class="panel-body"><h3>30</h3></div>
+    </div>
+
+    <div class="panel panel-default panel-success">
+        <div class="panel-heading">Attended</div>
+        <div class="panel-body"><h3>30</h3></div>
+    </div>
  
 
 

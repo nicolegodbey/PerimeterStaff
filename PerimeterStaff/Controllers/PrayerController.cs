@@ -32,13 +32,13 @@ namespace PerimeterStaff.Controllers
 
             APIStoredProcRequest sp = new APIStoredProcRequest()
             {
-                StoredProcedure = "api_12Stone_Custom_GetCurrentPrayers"
+                StoredProcedure = "api_PeriemterStaff_GetCurrentPrayers"
 
             };
-            dynamic response2 = api.ExecuteStoredProcedure(sp);
+            dynamic response = api.ExecuteStoredProcedure(sp);
 
             // Get contacts
-            foreach (var single in response2[0])
+            foreach (var single in response[0])
             {
                 Prayer Prayer = new Prayer();
                 Prayer.feedbackEntryID = single.feedbackEntryID;
