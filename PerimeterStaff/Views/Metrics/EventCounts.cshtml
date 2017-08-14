@@ -12,7 +12,7 @@
         <select class="selectpicker form-control" id="eventtitle"  title="Select Event" data-width="100%" data-size="20" data-live-search="true">
         @foreach (var eventsum in Model)
         {
-            <option id="@eventsum.eventID">@eventsum.eventTitle</option>
+            <option id="@eventsum.EventID">@eventsum.EventTitle</option>
         }
         </select>
     </div>
@@ -23,7 +23,7 @@
         <div class="panel-body"><h3>30</h3></div>
     </div>
 
-    <div class="panel panel-default panel-success">
+    <div class="panel panel-default panel-primary">
         <div class="panel-heading">Attended</div>
         <div class="panel-body"><h3>30</h3></div>
     </div>

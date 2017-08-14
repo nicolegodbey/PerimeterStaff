@@ -22,7 +22,7 @@ namespace PerimeterStaff.Controllers
             public int EventID { get; set; }
             public string EventTitle { get; set; }
             public DateTime EventDate { get; set; }
-            public int Registered { get; set; }
+            public int RegisteredPeople { get; set; }
             public int Attended { get; set; }
         }
 
@@ -43,7 +43,7 @@ namespace PerimeterStaff.Controllers
                 eventsum.EventID = single.eventID;
                 eventsum.EventTitle = single.eventTitle;
                 //eventsum.eventDate = single.eventDate;
-                eventsum.Registered = single.registered;
+                eventsum.RegisteredPeople = single.registered;
                 eventsum.Attended = single.attended;
                 eventsums.Add(eventsum);
             }

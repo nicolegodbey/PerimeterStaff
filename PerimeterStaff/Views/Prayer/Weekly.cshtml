@@ -5,7 +5,7 @@
 
 <div class="container-fluid">
 
-    <div class="panel panel-default">
+    <div class="panel panel-info">
         <div class="panel-heading">Prayer Requests</div>
 
         <div class="panel-body">
@@ -15,20 +15,20 @@
                     <div class="card">
                         <div class="card-header" role="tab">
                             <h5 class="mb-0">
-                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#@Prayer.feedbackEntryID" aria-expanded="false" aria-controls="collapseTwo">
-                                    @Prayer.displayName
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#@Prayer.FeedbackEntryID" aria-expanded="false" aria-controls="collapseTwo">
+                                    @Prayer.DisplayName
                                 </a>
                             </h5>
                         </div>
-                        <div id="@Prayer.feedbackEntryID" class="collapse" role="tabpanel">
+                        <div id="@Prayer.FeedbackEntryID" class="collapse" role="tabpanel">
                             <div class="card-block">
-                                <div>Email: <a href="mailto:@Prayer.emailAddress">@Prayer.emailAddress</a></div>
-                                <div>Mobile Phone: @Prayer.mobilePhone</div>
-                                <div>Home Phone: @Prayer.homePhone</div><br />
-                                <div>Membership: @Prayer.membershipStatus</div>
-                                <div>Parish: @Prayer.parishName</div>
-                                <div>Shepherd: @Prayer.shepherd</div><br />
-                                <div><blockquote class="blockquote">@Prayer.description</blockquote></div>
+                                <div>Email: <a href="mailto:@Prayer.EmailAddress">@Prayer.EmailAddress</a></div>
+                                <div>Mobile Phone: @Prayer.MobilePhone</div>
+                                <div>Home Phone: @Prayer.HomePhone</div><br />
+                                <div>Membership: @Prayer.MembershipStatus</div>
+                                <div>Parish: @Prayer.ParishName</div>
+                                <div>Shepherd: @Prayer.Shepherd</div><br />
+                                <div><blockquote class="blockquote">@Prayer.Description</blockquote></div>
 
                             </div>
                         </div>
