@@ -19,11 +19,11 @@ namespace PerimeterStaff.Controllers
         public List<Registered> eventsums = new List<Registered>();
         public class Registered
         {
-            public int eventID { get; set; }
-            public string eventTitle { get; set; }
-            public DateTime eventDate { get; set; }
-            public int registered { get; set; }
-            public int attended { get; set; }
+            public int EventID { get; set; }
+            public string EventTitle { get; set; }
+            public DateTime EventDate { get; set; }
+            public int Registered { get; set; }
+            public int Attended { get; set; }
         }
 
         public List<Registered> GetRegistered()
@@ -40,11 +40,11 @@ namespace PerimeterStaff.Controllers
             foreach (var single in response[0])
             {
                 Registered eventsum = new Registered();
-                eventsum.eventID = single.eventID;
-                eventsum.eventTitle = single.eventTitle;
+                eventsum.EventID = single.eventID;
+                eventsum.EventTitle = single.eventTitle;
                 //eventsum.eventDate = single.eventDate;
-                eventsum.registered = single.registered;
-                eventsum.attended = single.attended;
+                eventsum.Registered = single.registered;
+                eventsum.Attended = single.attended;
                 eventsums.Add(eventsum);
             }
 
@@ -61,20 +61,20 @@ namespace PerimeterStaff.Controllers
         public List<WeeklyMetrics> metrics = new List<WeeklyMetrics>();
         public class WeeklyMetrics
         {
-            public int metricsID { get; set; }
-            public DateTime startDate { get; set; }
-            public int worshipAttendance { get; set; }
-            public float downtownAttendance { get; set; }
-            public int kidsQuestAttendance { get; set; }
-            public decimal totalGiving { get; set; }
-            public int totalDonors { get; set; }
-            public int firstTimeDonors { get; set; }
-            public int members { get; set; }
-            public int inDiscipleship { get; set; }
-            public int discipleshipLeaders { get; set; }
-            public int inConnectGroup { get; set; }
-            public int serving { get; set; }
-            public int officers { get; set; }
+            public int MetricsID { get; set; }
+            public DateTime StartDate { get; set; }
+            public int WorshipAttendance { get; set; }
+            public float DowntownAttendance { get; set; }
+            public int KidsQuestAttendance { get; set; }
+            public decimal TotalGiving { get; set; }
+            public int TotalDonors { get; set; }
+            public int FirstTimeDonors { get; set; }
+            public int Members { get; set; }
+            public int InDiscipleship { get; set; }
+            public int DiscipleshipLeaders { get; set; }
+            public int InConnectGroup { get; set; }
+            public int Serving { get; set; }
+            public int Officers { get; set; }
 
         }
         public List<WeeklyMetrics> GetWeeklyMetrics()
@@ -91,10 +91,10 @@ namespace PerimeterStaff.Controllers
             foreach (var single in response[0])
             {
                 WeeklyMetrics metric = new WeeklyMetrics();
-                metric.metricsID = single.Warehouse_KPI_ID;
-                metric.startDate = single.Start_Date;
-                metric.worshipAttendance = single.Worship_Attendance_This_Week;
-                metric.downtownAttendance = single.Downtown_Attendance;
+                metric.MetricsID = single.Warehouse_KPI_ID;
+                metric.StartDate = single.Start_Date;
+                metric.WorshipAttendance = single.Worship_Attendance_This_Week;
+                metric.DowntownAttendance = single.Downtown_Attendance;
 
                 metrics.Add(metric);
             }

@@ -12,15 +12,15 @@ namespace PerimeterStaff.Controllers
         public List<Prayer> Prayers = new List<Prayer>();
         public class Prayer
         {
-            public int feedbackEntryID { get; set; }
-            public string displayName { get; set; }
-            public string emailAddress { get; set; }
-            public string mobilePhone { get; set; }
-            public string homePhone { get; set; }
-            public string membershipStatus { get; set; }
-            public string parishName { get; set; }
-            public string shepherd { get; set; }
-            public string description { get; set; }
+            public int FeedbackEntryID { get; set; }
+            public string DisplayName { get; set; }
+            public string EmailAddress { get; set; }
+            public string MobilePhone { get; set; }
+            public string HomePhone { get; set; }
+            public string MembershipStatus { get; set; }
+            public string ParishName { get; set; }
+            public string Shepherd { get; set; }
+            public string Description { get; set; }
 
         }
 
@@ -41,15 +41,15 @@ namespace PerimeterStaff.Controllers
             foreach (var single in response[0])
             {
                 Prayer Prayer = new Prayer();
-                Prayer.feedbackEntryID = single.feedbackEntryID;
-                Prayer.displayName = single.displayName;
-                Prayer.emailAddress = single.emailAddress;
-                Prayer.mobilePhone = single.mobilePhone;
-                Prayer.homePhone = single.homePhone;
-                Prayer.membershipStatus = single.membershipStatus;
-                Prayer.parishName = single.parishName;
-                Prayer.shepherd = single.shepherd;
-                Prayer.description = single.description;
+                Prayer.FeedbackEntryID = single.feedbackEntryID;
+                Prayer.DisplayName = single.displayName;
+                Prayer.EmailAddress = single.emailAddress;
+                Prayer.MobilePhone = single.mobilePhone;
+                Prayer.HomePhone = single.homePhone;
+                Prayer.MembershipStatus = single.membershipStatus;
+                Prayer.ParishName = single.parishName;
+                Prayer.Shepherd = single.shepherd;
+                Prayer.Description = single.description;
                 Prayers.Add(Prayer);
             }
 
